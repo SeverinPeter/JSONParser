@@ -7,7 +7,7 @@
   
   <servlet>
   	<servlet-name>ParserServlet</servlet-name>
-  	<servlet-class>resources.servlets.ParserServlet</servlet-class>
+  	<servlet-class>servlets.ParserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>ParserServlet</servlet-name>
