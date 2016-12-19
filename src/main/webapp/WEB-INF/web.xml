@@ -7,12 +7,10 @@
   
   <servlet>
   	<servlet-name>ParserServlet</servlet-name>
-  	<servlet-class>ServletJSONParser.src.main.resources.servlets.ParserServlet</servlet-class>
+  	<servlet-class>resources.servlets.ParserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>ParserServlet</servlet-name>
   	<url-pattern>/ParserServletPath</url-pattern>
   </servlet-mapping>
-  
-  
 </web-app>
