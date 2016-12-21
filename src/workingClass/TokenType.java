@@ -1,0 +1,20 @@
+package workingClass;
+
+public enum TokenType {
+	STRING,
+	INT,
+	OPEN_BRACKET,
+	CLOSE_BRACKET,
+	COMA,
+	OPEN_BRACE,
+	CLOSE_BRACE,
+	COLLON,
+	DECIMAL,
+	FLOAT,
+	ENDOFSTRING,
+	EOS,
+	MINUS,
+	TRUE,
+	FALSE,
+	NULL,
+}
