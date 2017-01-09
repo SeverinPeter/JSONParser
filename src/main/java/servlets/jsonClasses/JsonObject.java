@@ -1,24 +1,21 @@
-package jsonClasses;
+package servlets.jsonClasses;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class JsonObject extends JsonValue{
-	private Map<JsonString, JsonValue> pairs = new HashMap<>();
-	static Map<JsonObject, Integer> used = new HashMap<>();
-	
-	public void setPair (JsonString s, JsonValue v) {
+public class JsonObject extends JsonValue {
+	private Map<JsonString, JsonValue> pairs = new HashMap<JsonString, JsonValue>();
+	static Map<JsonObject, Integer> used = new HashMap<JsonObject, Integer>();
+
+	public void setPair(JsonString s, JsonValue v) {
 		pairs.put(s, v);
 	}
-	
+
 	public JsonValue getPair(JsonString s) {
 		return pairs.get(s);
 	}
-	
+
 	public Map<JsonString, JsonValue> getMembers() {
 		return pairs;
 	}
@@ -47,14 +44,14 @@ public class JsonObject extends JsonValue{
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		Set<JsonString> keys = pairs.keySet();
 		int i = 1;
 		if (used.containsKey(this))
-				sb.append(used.get(this));
+			sb.append(used.get(this));
 		else {
 			used.put(this, this.hashCode());
 			sb.append("{");

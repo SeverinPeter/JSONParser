@@ -1,23 +1,21 @@
-package jsonClasses;
+package servlets.jsonClasses;
 
-import java.util.Set;
-
-public class JsonString extends JsonValue{
+public class JsonString extends JsonValue {
 	private String vstring;
-	
-	public JsonString (Object obj) {
-		setValue((String)obj);
+
+	public JsonString(Object obj) {
+		setValue((String) obj);
 	}
-	
-	public void setValue (String s) {
+
+	public void setValue(String s) {
 		vstring = s;
 	}
-	
-	public String getValue () {
+
+	public String getValue() {
 		return vstring;
-		
+
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -34,7 +32,7 @@ public class JsonString extends JsonValue{
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -42,7 +40,7 @@ public class JsonString extends JsonValue{
 		result = prime * result + ((vstring == null) ? 0 : vstring.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "\"" + getValue() + "\"";

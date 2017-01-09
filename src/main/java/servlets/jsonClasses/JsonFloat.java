@@ -1,20 +1,20 @@
-package jsonClasses;
+package servlets.jsonClasses;
 
-public class JsonFloat extends JsonNummber{
+public class JsonFloat extends JsonNummber {
 	private Double vfloat;
 
-	public JsonFloat (Object obj) {
-		setValue((double)obj);
+	public JsonFloat(double obj) {
+		setValue(obj);
 	}
-	
-	public void setValue (double f) {
+
+	public void setValue(double f) {
 		vfloat = f;
 	}
-	
-	public double getValue () {
+
+	public double getValue() {
 		return vfloat.floatValue();
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -31,7 +31,7 @@ public class JsonFloat extends JsonNummber{
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -39,7 +39,7 @@ public class JsonFloat extends JsonNummber{
 		result = prime * result + ((vfloat == null) ? 0 : vfloat.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public String toString() {
 		return vfloat.toString();

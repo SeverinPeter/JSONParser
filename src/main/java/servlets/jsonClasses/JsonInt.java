@@ -1,22 +1,20 @@
-package jsonClasses;
+package servlets.jsonClasses;
 
-import java.util.Set;
-
-public class JsonInt extends JsonNummber{
+public class JsonInt extends JsonNummber {
 	private Integer vint;
-	
-	public JsonInt (Object obj) {
-		setValue((Integer)obj);
+
+	public JsonInt(Object obj) {
+		setValue((Integer) obj);
 	}
-	
-	public void setValue (Integer i) {
+
+	public void setValue(Integer i) {
 		vint = i;
 	}
-	
-	public long getValue () {
+
+	public long getValue() {
 		return vint.longValue();
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -33,7 +31,7 @@ public class JsonInt extends JsonNummber{
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -41,7 +39,7 @@ public class JsonInt extends JsonNummber{
 		result = prime * result + ((vint == null) ? 0 : vint.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public String toString() {
 		return vint.toString();

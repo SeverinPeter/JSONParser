@@ -1,20 +1,16 @@
-package jsonClasses;
+package servlets.jsonClasses;
 
-import java.util.Set;
-
-public final class JsonKeyWord extends JsonValue{
+public final class JsonKeyWord extends JsonValue {
 	public static final JsonKeyWord TRUE = new JsonKeyWord("true");
 	public static final JsonKeyWord FALSE = new JsonKeyWord("false");
 	public static final JsonKeyWord NULL = new JsonKeyWord("null");
-	
+
 	private String value;
-	
+
 	private JsonKeyWord(String string) {
 		this.value = string;
-		}
-	
-	
-	
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -31,7 +27,7 @@ public final class JsonKeyWord extends JsonValue{
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -39,7 +35,7 @@ public final class JsonKeyWord extends JsonValue{
 		result = prime * result + ((value == null) ? 0 : value.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public String toString() {
 		return value;
